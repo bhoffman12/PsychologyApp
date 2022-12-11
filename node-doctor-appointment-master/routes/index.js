@@ -14,6 +14,8 @@ const {
     updatePrescription,
     cancelPrescription,
     getPrescription,
+    getContact,
+    updateContact
 } = require('../controllers/user');
 const Appointment = require("../models/Appointment");
 const Doctor = require("../models/Doctor");
@@ -35,9 +37,18 @@ router.get('/about', (req, res) => {
     res.render('about');
 });
 
-router.get('/contact', (req, res) => {
-    res.render('contact');
+router.get('/contact', async (req, res) => {
+    let userList;
+    if (req.session.token) {
+        userList =  await User.find({userId: req.session.userId});
+        res.render('contact',{
+        userList,
+    });
+    }else {
+    res.redirect('/');
+    }
 });
+
 
 router.get('/home', (req, res) => {
     const { token, userName, role } = req.session;
@@ -131,6 +142,7 @@ router.get('/prescriptions', async (req, res) => {
 router.post("/users/register", register);
 router.post("/users/login", login);
 router.get("/users/logout", logout);
+
 
 //APPOINTMENT ROUTE
 router.post("/appointment/create", createAppointment);

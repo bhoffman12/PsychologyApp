@@ -16,6 +16,19 @@
                     <div class="col-md-6 p-5" style="background: #f2f2f2;">
                         <form action="/prescription/<%= prescription._id %>" method="POST">
                             <div class="prescription">
+                                <div class="prescription">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="pb-2">Patient Name:</label>
+                                            <input required value="<%= prescription.patientName %>" type="text"
+                                                class="form-control mb-3" placeholder="John Doe" id="patientName" name="patientName">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="pb-2">Patient Birthdate:</label>
+                                            <input required value="<%= prescription.patientBirth %>" type="date"
+                                                class="form-control mb-3" placeholder="MM/DD/YYYY" id="patientBirth" name="patientBirth">
+                                        </div>
+                                    </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="pb-2">Prescription Name:</label>
