@@ -28,11 +28,12 @@
 
                         <h5>Your Contact Information:</h5>
 
-                        <form action="/users/register" method="POST">
+                        <form action="/contact" method="POST">
                             <div class="row">
+                                
                                 <label class="pb-2">User Name</label>
                                 <input required type="text" class="form-control" placeholder="User Name" id="username"
-                                    name="username">
+                                    name="username" value="">
                                 <label class="pt-3 pb-2">Password</label>
                                 <input required type="password" class="form-control" placeholder="Password" id="password"
                                     name="password">
@@ -53,7 +54,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label class="pb-2">Phone Number:</label>
-                                    <input required type="number" class="form-control mb-3" placeholder="XXX-XXX-XXXX"
+                                    <input required type="phone" class="form-control mb-3" placeholder="XXX-XXX-XXXX"
                                         id="phone" name="phone">
                                 </div>
                                 <div class="col-md-6">

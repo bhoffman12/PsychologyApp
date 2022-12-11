@@ -34,6 +34,8 @@
                             <table class="table align-middle table-bordered">
                                 <thead>
                                     <tr>
+                                        <th scope="col">Patient Name</th>
+                                        <th scope="col">Patient Birthdate</th>
                                         <th scope="col">Prescription Name</th>
                                         <th scope="col">Prescription Dose</th>
                                         <th scope="col">Prescribing Doctor</th>
@@ -45,6 +47,12 @@
                                 <tbody>
                                     <% prescriptionList.forEach(function(prescription,index){ %>
                                         <tr>
+                                            <td>
+                                                <%= prescription.patientName %>
+                                            </td>
+                                            <td>
+                                                <%= prescription.patientBirth %>
+                                            </td>
                                             <td>
                                                 <%= prescription.prescriptionName %>
                                             </td>
