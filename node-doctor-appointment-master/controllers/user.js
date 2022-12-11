@@ -5,9 +5,7 @@ const Appointment = require("../models/Appointment");
 const moment = require('moment');
 const Message = require("../models/Message");
 const Doctor = require("../models/Doctor");
-const Prescription = require("../models/Prescriptions")
-
-//test
+const Prescription = require("../models/Prescriptions"
 
 
 //REGISTER USER
